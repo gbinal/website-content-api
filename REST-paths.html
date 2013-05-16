@@ -1,0 +1,242 @@
+<html>
+<body>
+<h3>REST paths</h3>
+<p>View responses from various API calls&nbsp;with tools such as <a href="http://www.fiddler2.com/fiddler2/" target="_blank">Fiddler</a> or <a href="https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en#detail/rest-console/cokgbflfommojglbmbpenpphppikmonn?hl=en" target="_blank">Chrome's REST Console</a>.</p>
+<p>Supported representational state transfer (REST) paths:</p>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/topics/">api.ers.usda.gov/REST/v1/content/topics/</a></li>
+<ul>
+<li>Returns an array of <strong>all root-level topic</strong> objects.</li>
+<li>Includes the topicId value for each topic object.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/topics?id={topicId}</li>
+<ul>
+<li>Food Market &amp; Prices topic:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/topics?id=1764">api.ers.usda.gov/REST/v1/content/topics?id=1764</a></li>
+</ul>
+<li>Returns a<strong> single topic</strong> object according to the <strong>topicId</strong> provided.</li>
+<li>Accepts a topicId value of type int.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/topics?id={topicId}&amp;getChildren=true</li>
+<ul>
+<li>Children (subtopics) of Food Martket &amp; Prices topic:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/topics?id=1764&amp;getChildren=true">api.ers.usda.gov/REST/v1/content/topics?id=1764&amp;getChildren=true</a></li>
+</ul>
+<li>Returns an array of<strong> all subtopic </strong>objects with the <strong>parent topicId</strong> value provided.</li>
+<li>Includes the subtopicId value for each subtopic object.</li>
+<li>Accepts a topicId value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/charts/">api.ers.usda.gov/REST/v1/content/charts/</a></li>
+<ul>
+<li>Returns a <strong>large array of all chart objects</strong>.</li>
+<li>Includes the chartId value for each chart object.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/charts?take={count}</li>
+<ul>
+<li>Five most recent charts:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/charts?take=5">api.ers.usda.gov/REST/v1/content/charts?take=5</a></li>
+</ul>
+<li>Returns an array of the<strong> most recent chart </strong>objects limited to the <strong>count value</strong> provided.</li>
+<li>Includes the chartId value for each chart object.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/charts?id={chartId}</li>
+<ul>
+<li>Specific chart:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/charts?id=37298">api.ers.usda.gov/REST/v1/content/charts?id=37298</a></li>
+</ul>
+<li>Returns <strong>a single chart</strong> object according to the <strong>chartId</strong> value provided.</li>
+<li>Accepts a chartId value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/charts/collections/">api.ers.usda.gov/REST/v1/content/charts/collections/</a></li>
+<ul>
+<li>Returns an array of <strong>chart collection</strong> objects</li>
+<li>Includes the collectionAlias value for each collection object.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/charts/collections?alias={collectionAlias}</li>
+<ul>
+<li>Charts of Note collection:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/charts/collections?alias=chartsOfNote">api.ers.usda.gov/REST/v1/content/charts/collections?alias=chartsOfNote</a></li>
+</ul>
+<li>Returns an array of <strong>chart objects</strong> <strong>filtered</strong> by the <strong>collectionAlias</strong> value provided.</li>
+<li>Includes the chartId value for each chart object.</li>
+<li>Accepts a collectionAlias value of type string.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/charts/collections?alias={collectionAlias}&amp;take={count}</li>
+<ul>
+<li>Five most recent charts from the Charts of Note collection:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/charts/collections?alias=chartsOfNote&amp;take=5">api.ers.usda.gov/REST/v1/content/charts/collections?alias=chartsOfNote&amp;take=5</a></li>
+</ul>
+<li>Returns an array of <strong>chart objects filtered</strong> by the <strong>collectionAlias</strong> value provided and limited by the <strong>count value</strong> provided.</li>
+<li>Includes the chartId value for each chart object.</li>
+<li>Accepts a collectionAlias value of type string.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/dataproducts/">api.ers.usda.gov/REST/v1/content/dataproducts/</a></li>
+<ul>
+<li>Returns an array of <strong>all data product</strong> objects.</li>
+<li>Includes the dataProductId value for each data product object.</li>
+<li>Includes the typeAlias value for each data product object.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/dataproducts?id={dataProductId}</li>
+<ul>
+<li>ARMS Data Product page</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/dataproducts?id=9471">api.ers.usda.gov/REST/v1/content/dataproducts?id=9471</a></li>
+</ul>
+<li>Returns <strong>a single data product</strong> object according to the <strong>dataProductId</strong> value provided.</li>
+<li>Accepts a dataProductId value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/dataproducts/types/">api.ers.usda.gov/REST/v1/content/dataproducts/types/</a></li>
+<ul>
+<li>Returns <strong>a string array</strong> (string[]) of <strong>valid data product typeAlias</strong> values.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/dataproducts/types?alias={typeAlias}</li>
+<ul>
+<li>Reporting Data Products:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/dataproducts/types?alias=reporting">api.ers.usda.gov/REST/v1/content/dataproducts/types?alias=reporting</a></li>
+</ul>
+<li>Returns an array of <strong>data product objects filtered</strong> by the <strong>typeAlias</strong> value.</li>
+<li>Includes the dataProductId value for each data product object.</li>
+<li>Includes the typeAlias value for each data product object.</li>
+<li>Accepts a typeAlias value of type string.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/">api.ers.usda.gov/REST/v1/content/publications/</a></li>
+<ul>
+<li>Returns <strong>a large array of all publication</strong> objects.</li>
+<li>Includes the publicationId value for each publication object.</li>
+<li>Includes the seriesCode value for each publication object.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/publications?id={publicationId}</li>
+<ul>
+<li>A specific publication:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications?id=32387">api.ers.usda.gov/REST/v1/content/publications?id=32387</a></li>
+</ul>
+<li>Returns <strong>a single publication</strong> object according to the <strong>publicationId</strong> value provided.</li>
+<li>Accepts a publicationId value of type int.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/publications?take={count}</li>
+<ul>
+<li>Five most recent publications:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications?take=5">api.ers.usda.gov/REST/v1/content/publications?take=5</a></li>
+</ul>
+<li>Returns an array of the <strong>most recent publication</strong> objects limited by the <strong>count value</strong> provided.</li>
+<li>Includes the publicationId value for each publication object.</li>
+<li>Includes the seriesCode value for each publication object.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/types/">api.ers.usda.gov/REST/v1/content/publications/types/</a></li>
+<ul>
+<li>Returns <strong>a string array</strong> (string[]) of <strong>valid publication typeAlias</strong> values.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/publications/types?alias={typeAlias}</li>
+<ul>
+<li>All Outlook Publications:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/types?alias=Outlook">api.ers.usda.gov/REST/v1/content/publications/types?alias=Outlook</a></li>
+</ul>
+<li>Returns an array of <strong>publication objects filtered</strong> by the<strong> typeAlias</strong> value provided.</li>
+<li>Includes the publicationId value for each publication object.</li>
+<li>Includes the seriesCode value for each publication object.</li>
+<li>Accepts a typeAlias value of type string.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/publications/types?alias={typeAlias}&amp;take={count}</li>
+<ul>
+<li>Five most recent Outlook Publications:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/types?alias=Outlook&amp;take=5">api.ers.usda.gov/REST/v1/content/publications/types?alias=Outlook&amp;take=5</a></li>
+</ul>
+<li>Returns an array of <strong>publication objects filtered</strong> by the <strong>typeAlias</strong> value provided and limited by the <strong>count value</strong> provided.</li>
+<li>Includes the publicationId value for each publication object.</li>
+<li>Includes the seriesCode value for each publication object.</li>
+<li>Accepts a typeAlias value of type string.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/series/">api.ers.usda.gov/REST/v1/content/publications/series/</a></li>
+<ul>
+<li>Returns a <strong>string array</strong> (string[]) of valid <strong>publication seriesCode</strong> values.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/publications/series?code={seriesCode}</li>
+<ul>
+<li>All AIB Publications:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/series?code=AIB">api.ers.usda.gov/REST/v1/content/publications/series?code=AIB</a></li>
+</ul>
+<li>Returns an array of <strong>publication objects filtered</strong> by the <strong>seriesCode</strong> value provided.</li>
+<li>Includes the publicationId value for each publication object.</li>
+<li>Includes the seriesCode value for each publication object.</li>
+<li>Accepts a seriesCode value of type string.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/publications/series?code={seriesCode}&amp;take={count}</li>
+<ul>
+<li>Five most recent AIB Publications:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/publications/series?code=AIB&amp;take=5">api.ers.usda.gov/REST/v1/content/publications/series?code=AIB&amp;take=5</a></li>
+</ul>
+<li>Returns an array of <strong>publcation objects filtered</strong> by the<strong> seriesCode</strong> value provided and limited by the <strong>count value</strong> provided.</li>
+<li>Includes the publicationId value for each publication object.</li>
+<li>Includes the seriesCode value for each publication object.</li>
+<li>Accepts a seriesCode value of type string.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/amberwaves/">api.ers.usda.gov/REST/v1/content/amberwaves/</a></li>
+<ul>
+<li>Returns an array of <strong>all AmberWaves</strong> article objects.</li>
+<li>Includes the articleId value for each AmberWave article object.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/amberwaves?id={articleId}</li>
+<ul>
+<li>A specifice Amber Waves article</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/amberwaves?id=35553">api.ers.usda.gov/REST/v1/content/amberwaves?id=35553</a></li>
+</ul>
+<li>Returns <strong>a single AmberWaves article</strong> object according to the <strong>articleId</strong> value provided.</li>
+<li>Accepts an articleId value of type int.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/amberwaves?take={count}</li>
+<ul>
+<li>Five most recent Amber Waves articles</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/amberwaves?take=5">api.ers.usda.gov/REST/v1/content/amberwaves?take=5</a></li>
+</ul>
+<li>Returns an array of <strong>AmberWaves article objects</strong> limited by the <strong>count value</strong> provided.</li>
+<li>Includes the articleId value for each AmberWave article object.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/amberwaves/sections/">api.ers.usda.gov/REST/v1/content/amberwaves/sections/</a></li>
+<ul>
+<li>Returns a <strong>string array</strong> (string[]) of valid <strong>AmberWaves</strong> article <strong>sectionAlias</strong> values.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/amberwaves/sections?alias={sectionAlias}</li>
+<ul>
+<li>All "Markets and Trade" Amber Waves articles:</li>
+<ul>
+<li><a href="http://api.ers.usda.gov/REST/v1/content/amberwaves/sections?alias=Markets_and_Trade">api.ers.usda.gov/REST/v1/content/amberwaves/sections?alias=Markets_and_Trade</a></li>
+</ul>
+<li>Returns an array of <strong>AmberWaves article objects filtered </strong>by the <strong>sectionAlias</strong> value provided.</li>
+<li>Includes the articleId value for each AmberWaves article object.</li>
+<li>Accepts a sectionAlias value of type string.</li>
+</ul>
+<li>api.ers.usda.gov/REST/v1/content/amberwaves/sections?alias={sectionAlias}&amp;take={count}</li>
+<ul>
+<li>Five most recent "Markets and Trade" Amber Waves articles:</li>
+<ul>
+<li><a href="/http;/api.ers.usda.gov/REST/v1/content/amberwaves/sections?alias=Markets_and_Trade&amp;take=5">api.ers.usda.gov/REST/v1/content/amberwaves/sections?alias=Markets_and_Trade&amp;take=5</a></li>
+</ul>
+<li>Returns an array of <strong>AmberWaves article</strong> objects filtered by the <strong>sectionAlias</strong> value provided and limited by the <strong>count value</strong>.</li>
+<li>Includes the articleId value for each AmberWaves article object.</li>
+<li>Accepts a sectionAlias value of type string.</li>
+<li>Accepts a count value of type int.</li>
+</ul>
+</ul>
+</body>
+</html>
