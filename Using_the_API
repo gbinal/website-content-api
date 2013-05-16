@@ -8,7 +8,7 @@
 <li>XML Response = Content-Type:text/json</li>
 </ul>
 <p>The examples are for JSON-formatted responses.</p>
-<p>Making the request to the <a href="http://en.wikipedia.org/wiki/REST">REST</a> service involves a simple <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> request and response. The following is a simple method that makes an <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> request using the <a href="http://en.wikipedia.org/wiki/Url">URL</a> provided and returns an HttpWebResponse object. The HttpWebRequest and HttpWebResponse objects are part of the System.Net namespace.</p>
+<p>Making the request to the REST service involves a simple HTTP request and response. The following is a simple method that makes an <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a> request using the <a href="http://en.wikipedia.org/wiki/Url">URL</a> provided and returns an HttpWebResponse object. The HttpWebRequest and HttpWebResponse objects are part of the System.Net namespace.</p>
 <p style="padding-left: 30px;"><em><strong>}</strong></em><br> <br><em><strong> Page.Controls.Add(_placeHolder);</strong></em></p>
 </body>
 </html>
